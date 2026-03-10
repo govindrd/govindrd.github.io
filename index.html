@@ -3,216 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govind Jairam Rathod - Full-Stack Developer Portfolio</title>
+    <title>Govind Jairam Rathod - Portfolio</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* Navbar */
         nav {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
         .nav-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .nav-logo {
             font-size: 1.8rem;
             font-weight: bold;
             color: white;
         }
-
         .nav-menu {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
-
         .nav-menu a {
             color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
         }
-
         .nav-menu a:hover {
             opacity: 0.8;
         }
-
-        /* Hero Section */
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 6rem 0;
             text-align: center;
-            margin-bottom: 0;
         }
-
         header h1 {
             font-size: 3.5rem;
             margin-bottom: 0.5rem;
         }
-
         .subtitle {
             font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.95;
+            margin-bottom: 1rem;
         }
-
         .tagline {
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
         }
-
         .hero-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-
         .btn {
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
             border: none;
             cursor: pointer;
+            transition: all 0.3s;
         }
-
         .btn-primary {
             background-color: white;
             color: #667eea;
         }
-
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-
         .btn-secondary {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255,255,255,0.2);
             color: white;
             border: 2px solid white;
         }
-
         .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255,255,255,0.3);
         }
-
-        /* Sections */
         section {
             padding: 4rem 0;
             background: white;
-            margin-bottom: 1rem;
         }
-
         section:nth-child(even) {
             background: #f8f9fa;
         }
-
         h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
             text-align: center;
             color: #333;
         }
-
         h3 {
             color: #667eea;
-            margin-top: 1rem;
-        }
-
-        /* About Section */
-        .about-content p {
-            font-size: 1.1rem;
-            color: #666;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .info-item {
-            background: white;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-
-        .info-label {
-            font-weight: 600;
-            color: #667eea;
-            display: block;
             margin-bottom: 0.5rem;
         }
-
-        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
-
         .project-card {
             background: white;
             border-radius: 0.75rem;
             padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
             border-top: 4px solid #667eea;
         }
-
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-
         .project-date {
             color: #999;
             font-size: 0.9rem;
             margin-bottom: 1rem;
         }
-
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1rem;
         }
-
         .tag {
             background-color: #f0f0f0;
             color: #667eea;
@@ -221,12 +153,10 @@
             font-size: 0.85rem;
             font-weight: 500;
         }
-
         .project-details {
             list-style: none;
             margin-top: 1rem;
         }
-
         .project-details li {
             margin-bottom: 0.75rem;
             padding-left: 1.5rem;
@@ -234,7 +164,6 @@
             color: #666;
             font-size: 0.95rem;
         }
-
         .project-details li:before {
             content: "→";
             position: absolute;
@@ -242,32 +171,22 @@
             color: #667eea;
             font-weight: bold;
         }
-
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
-
         .skill-category {
             background: white;
             padding: 1.5rem;
             border-radius: 0.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-
-        .skill-category h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.75rem;
         }
-
         .skill-tag {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -276,21 +195,17 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-
-        /* Education Timeline */
         .timeline {
             position: relative;
             max-width: 800px;
             margin: 0 auto;
         }
-
         .timeline-item {
             display: flex;
             gap: 2rem;
             margin-bottom: 2rem;
             position: relative;
         }
-
         .timeline-marker {
             width: 20px;
             height: 20px;
@@ -298,9 +213,7 @@
             border-radius: 50%;
             flex-shrink: 0;
             margin-top: 0.5rem;
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
         }
-
         .timeline-item:not(:last-child)::before {
             content: '';
             position: absolute;
@@ -310,27 +223,22 @@
             height: calc(100% + 20px);
             background-color: #ddd;
         }
-
         .timeline-content {
             flex: 1;
             background: white;
             padding: 1.5rem;
             border-radius: 0.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-
         .degree {
             color: #667eea;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
-
         .details {
             color: #999;
             font-size: 0.9rem;
         }
-
-        /* Certifications */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -338,62 +246,46 @@
             max-width: 900px;
             margin: 0 auto;
         }
-
         .cert-item {
             background: white;
             padding: 1.5rem;
             border-radius: 0.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: center;
         }
-
         .cert-icon {
             font-size: 2rem;
-            flex-shrink: 0;
+            margin-bottom: 0.5rem;
         }
-
         .cert-item h3 {
-            margin-top: 0;
             margin-bottom: 0.25rem;
         }
-
         .cert-item p {
             color: #999;
             font-size: 0.9rem;
             margin: 0;
         }
-
-        /* Contact Section */
         .contact-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
-
         .contact-info h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
             color: #667eea;
         }
-
         .contact-info p {
             color: #666;
             margin-bottom: 2rem;
-            font-size: 1.1rem;
         }
-
         .contact-links {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
         }
-
         .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            display: inline-block;
             padding: 1rem;
             background: white;
             border: 2px solid #ddd;
@@ -402,80 +294,34 @@
             color: #333;
             transition: all 0.3s;
         }
-
         .contact-link:hover {
             border-color: #667eea;
-            background-color: #f8f9fa;
-            transform: translateX(5px);
+            transform: translateY(-2px);
         }
-
-        .contact-link .icon {
+        .contact-icon {
             font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
-
-        /* Footer */
         footer {
             background: #333;
             color: white;
             padding: 2rem 0;
             text-align: center;
         }
-
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5rem;
             }
-
             .subtitle {
                 font-size: 1.2rem;
             }
-
-            .nav-menu {
-                gap: 1rem;
-            }
-
             h2 {
                 font-size: 2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 200px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .subtitle {
-                font-size: 1rem;
-            }
-
-            .nav-menu {
-                gap: 0.5rem;
-                font-size: 0.9rem;
-            }
-
-            header {
-                padding: 3rem 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
             <div class="nav-content">
@@ -491,12 +337,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header>
         <div class="container">
             <h1>Govind Jairam Rathod</h1>
-            <p class="subtitle">Full-Stack Developer | NLP Enthusiast | Computer Science Student</p>
-            <p class="tagline">Building scalable, interactive applications with a passion for innovation</p>
+            <p class="subtitle">Full-Stack Developer | NLP Enthusiast</p>
+            <p class="tagline">Building scalable applications with innovation</p>
             <div class="hero-buttons">
                 <a href="https://github.com/govindrd" class="btn btn-primary" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/govindrd" class="btn btn-secondary" target="_blank">LinkedIn</a>
@@ -505,107 +350,77 @@
         </div>
     </header>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <div class="about-content">
-                <p>Enthusiastic final-year Computer Science student with strong hands-on project experience in full-stack development and NLP. Skilled at building scalable and interactive applications with a strong foundation in problem-solving and practical implementation.</p>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="info-label">Location</span>
-                        <span>Bangalore, Karnataka</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Phone</span>
-                        <span>+91 636-656-4107</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Email</span>
-                        <span>govindajairam.cs23@bmsece.ac.in</span>
-                    </div>
-                </div>
-            </div>
+            <p style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 2rem;">Final-year Computer Science student with strong hands-on project experience in full-stack development and NLP.</p>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
-                    <h3>Amazon Clone - E-Commerce Web Application</h3>
+                    <h3>Amazon Clone - E-Commerce</h3>
                     <p class="project-date">Sep 2023 - Jan 2024</p>
                     <div class="project-tags">
                         <span class="tag">React</span>
                         <span class="tag">Firebase</span>
                         <span class="tag">Stripe</span>
-                        <span class="tag">Node.js</span>
                     </div>
                     <ul class="project-details">
-                        <li>Built a full-stack e-commerce web app replicating Amazon's core functionalities</li>
-                        <li>Integrated Firebase Firestore for real-time data and Stripe for secure payments</li>
-                        <li>Implemented user authentication and responsive cart/checkout</li>
-                        <li>Designed an admin dashboard for efficient product and order management</li>
+                        <li>Full-stack e-commerce web app with Firebase Firestore</li>
+                        <li>Integrated Stripe for secure payments</li>
+                        <li>Admin dashboard for product management</li>
                     </ul>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="project-card">
-                    <h3>VidSum - YouTube Video Summarizer</h3>
+                    <h3>VidSum - YouTube Summarizer</h3>
                     <div class="project-tags">
                         <span class="tag">Python</span>
                         <span class="tag">NLP</span>
-                        <span class="tag">YouTube API</span>
                         <span class="tag">React</span>
                     </div>
                     <ul class="project-details">
-                        <li>Developed a web app that summarizes YouTube videos using NLP and YouTube API</li>
-                        <li>Implemented transcript-based summarization for faster content understanding</li>
-                        <li>Designed a clean, responsive UI with search and keyword-based filtering</li>
-                        <li>Enabled summary download and optimized NLP pipeline for efficient performance</li>
+                        <li>Summarizes YouTube videos using NLP</li>
+                        <li>Transcript-based summarization</li>
+                        <li>Responsive UI with search filtering</li>
                     </ul>
                 </div>
 
-                <!-- Project 3 -->
                 <div class="project-card">
                     <h3>Real-Time Chat Application</h3>
                     <div class="project-tags">
                         <span class="tag">Socket.IO</span>
                         <span class="tag">Node.js</span>
                         <span class="tag">React</span>
-                        <span class="tag">MongoDB</span>
                     </div>
                     <ul class="project-details">
-                        <li>Built a responsive real-time chat app supporting multiple users and instant messaging</li>
-                        <li>Implemented WebSocket communication using Socket.IO for seamless message exchange</li>
-                        <li>Designed a user-friendly UI and managed client-server interaction efficiently</li>
+                        <li>Real-time messaging with multiple users</li>
+                        <li>WebSocket communication</li>
+                        <li>User-friendly interface</li>
                     </ul>
                 </div>
 
-                <!-- Project 4 -->
                 <div class="project-card">
-                    <h3>LLM-Based Security Chatbot for Incident Response</h3>
+                    <h3>LLM Security Chatbot</h3>
                     <div class="project-tags">
                         <span class="tag">GPT</span>
-                        <span class="tag">LLM</span>
-                        <span class="tag">RAG</span>
                         <span class="tag">Python</span>
+                        <span class="tag">RAG</span>
                     </div>
                     <ul class="project-details">
-                        <li>Conducted literature survey on multi-agent LLMs and retrieval-augmented chatbots</li>
-                        <li>Developed GPT-based architecture integrating real-time threat intelligence retrieval</li>
-                        <li>Role-specific agent behaviors to reduce alert fatigue in SOC automation</li>
-                        <li>Implementing intent detection, vector-based retrieval, and human-in-the-loop learning</li>
+                        <li>Multi-agent LLM for incident response</li>
+                        <li>Real-time threat intelligence</li>
+                        <li>Survey paper under review</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2>Skills & Technologies</h2>
@@ -621,12 +436,10 @@
                 <div class="skill-category">
                     <h3>Libraries & Frameworks</h3>
                     <div class="skill-tags">
+                        <span class="skill-tag">React</span>
                         <span class="skill-tag">Pandas</span>
                         <span class="skill-tag">NumPy</span>
                         <span class="skill-tag">OpenCV</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Seaborn</span>
-                        <span class="skill-tag">React.js</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -648,7 +461,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education">
         <div class="container">
             <h2>Education</h2>
@@ -656,23 +468,23 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>BMS College of Engineering, Bangalore</h3>
-                        <p class="degree">B.E. in Computer Science and Engineering</p>
-                        <p class="details">CGPA: 7.84 | Expected: 2026</p>
+                        <h3>BMS College of Engineering</h3>
+                        <p class="degree">B.E. Computer Science</p>
+                        <p class="details">CGPA: 7.84 | Expected 2026</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Government Polytechnic College, Vijayapura</h3>
-                        <p class="degree">Diploma in Computer Science and Engineering</p>
+                        <h3>Government Polytechnic College</h3>
+                        <p class="degree">Diploma in Computer Science</p>
                         <p class="details">CGPA: 9.79 | 2020 - 2023</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Shree Jagadamba High School, Sindagi</h3>
+                        <h3>Shree Jagadamba High School</h3>
                         <p class="degree">SSLC</p>
                         <p class="details">90.72% | 2018 - 2020</p>
                     </div>
@@ -681,72 +493,52 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section id="certifications">
         <div class="container">
             <h2>Certifications</h2>
             <div class="cert-grid">
                 <div class="cert-item">
-                    <span class="cert-icon">🏆</span>
-                    <div>
-                        <h3>SQL (Basic)</h3>
-                        <p>HackerRank</p>
-                    </div>
+                    <div class="cert-icon">🏆</div>
+                    <h3>SQL (Basic)</h3>
+                    <p>HackerRank</p>
                 </div>
                 <div class="cert-item">
-                    <span class="cert-icon">🏆</span>
-                    <div>
-                        <h3>Data Visualization using Python</h3>
-                        <p>Great Learning</p>
-                    </div>
+                    <div class="cert-icon">🏆</div>
+                    <h3>Data Visualization</h3>
+                    <p>Great Learning</p>
                 </div>
                 <div class="cert-item">
-                    <span class="cert-icon">🏆</span>
-                    <div>
-                        <h3>Artificial Intelligence for All</h3>
-                        <p>Infosys Springboard (July 2025)</p>
-                    </div>
+                    <div class="cert-icon">🏆</div>
+                    <h3>AI for All</h3>
+                    <p>Infosys Springboard</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2>Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Let's Connect</h3>
-                    <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+                    <p>Feel free to reach out for opportunities and collaboration</p>
                     <div class="contact-links">
                         <a href="mailto:govindajairam.cs23@bmsece.ac.in" class="contact-link">
-                            <span class="icon">📧</span>
-                            <div>
-                                <div>Email</div>
-                                <small>govindajairam.cs23@bmsece.ac.in</small>
-                            </div>
+                            <div class="contact-icon">📧</div>
+                            <div>Email</div>
                         </a>
                         <a href="tel:+916366564107" class="contact-link">
-                            <span class="icon">📱</span>
-                            <div>
-                                <div>Phone</div>
-                                <small>+91 636-656-4107</small>
-                            </div>
+                            <div class="contact-icon">📱</div>
+                            <div>Phone</div>
                         </a>
                         <a href="https://github.com/govindrd" class="contact-link" target="_blank">
-                            <span class="icon">💻</span>
-                            <div>
-                                <div>GitHub</div>
-                                <small>github.com/govindrd</small>
-                            </div>
+                            <div class="contact-icon">💻</div>
+                            <div>GitHub</div>
                         </a>
                         <a href="https://linkedin.com/in/govindrd" class="contact-link" target="_blank">
-                            <span class="icon">💼</span>
-                            <div>
-                                <div>LinkedIn</div>
-                                <small>linkedin.com/in/govindrd</small>
-                            </div>
+                            <div class="contact-icon">💼</div>
+                            <div>LinkedIn</div>
                         </a>
                     </div>
                 </div>
@@ -754,25 +546,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Govind Jairam Rathod. All rights reserved.</p>
-            <p>Built with ❤️ using HTML & CSS</p>
-        </div>
+        <p>&copy; 2026 Govind Jairam Rathod. All rights reserved.</p>
+        <p>Built with HTML & CSS</p>
     </footer>
-
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
