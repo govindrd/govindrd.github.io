@@ -82,7 +82,7 @@ I'm a final-year Computer Science student at BMS College of Engineering with str
 
 | Degree | Institution | Duration | CGPA |
 |--------|-------------|----------|------|
-| B.E. Computer Science | BMS College of Engineering, Bangalore | 2023 - 2026 | 8.1 |
+| B.E. in Computer Science | BMS College of Engineering, Bangalore | 2023 - 2026 | 8.1 |
 | Diploma in Computer Science | Government Polytechnic College, Vijayapura | 2020 - 2023 | 9.79 |
 | SSLC | Shree Jagadamba High School, Sindagi | 2018 - 2020 | 90.72% |
 
